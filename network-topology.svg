@@ -1,192 +1,208 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
-  <rect width="1200" height="760" fill="#cfcfcf"/>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="768" viewBox="0 0 1440 768">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#000"/>
-    </marker>
     <style>
-      .label { fill: #111; font: 14px Arial, sans-serif; }
-      .small { fill: #111; font: 12px Arial, sans-serif; }
-      .node { fill: #d9edf7; stroke: #1f5f81; stroke-width: 1.2; }
-      .switch { fill: #7ab6cf; stroke: #1f5f81; stroke-width: 1.2; }
-      .router { fill: #b9d8e4; stroke: #1f5f81; stroke-width: 1.2; }
-      .server { fill: #7ab6cf; stroke: #1f5f81; stroke-width: 1.2; }
-      .host { fill: #dcece7; stroke: #2a7d67; stroke-width: 1.2; }
-      .wire { stroke: #000; stroke-width: 3; fill: none; }
-      .wire-green { stroke: #26bf5e; stroke-width: 3; fill: none; }
-      .wire-orange { stroke: #f39c12; stroke-width: 3; fill: none; }
-      .wire-blue { stroke: #1c7ec4; stroke-width: 3; fill: none; }
-      .tag { fill: #fff; stroke: #111; stroke-width: 1; rx: 4; }
-      .siteTag { fill: #fff; stroke: #111; stroke-width: 1; rx: 4; }
+      .bg { fill: #d3d3d3; }
+      .label { fill: #111; font: 700 13px Arial, sans-serif; }
+      .small { fill: #111; font: 700 12px Arial, sans-serif; }
+      .tiny { fill: #111; font: 700 11px Arial, sans-serif; }
+      .node { fill: #cfe8f6; stroke: #3a3a3a; stroke-width: 1.2; }
+      .router { fill: #dfeaf2; stroke: #3a3a3a; stroke-width: 1.2; }
+      .switch { fill: #7db8d0; stroke: #3a3a3a; stroke-width: 1.2; }
+      .server { fill: #7fb9d1; stroke: #3a3a3a; stroke-width: 1.2; }
+      .pc { fill: #dceef5; stroke: #3a3a3a; stroke-width: 1.2; }
+      .wire { stroke: #0b0b0b; stroke-width: 3; fill: none; }
+      .wireg { stroke: #2ecc71; stroke-width: 3; fill: none; }
+      .wireo { stroke: #f39c12; stroke-width: 3; fill: none; }
+      .tag { fill: rgba(255,255,255,0.85); stroke: #111; stroke-width: 1; }
+      .tag2 { fill: rgba(255,255,255,0.7); stroke: #111; stroke-width: 1; }
     </style>
   </defs>
 
-  <!-- Top row PCs -->
+  <rect class="bg" x="0" y="0" width="1440" height="768"/>
+
+  <!-- Top-right PCs -->
   <g>
-    <rect x="530" y="35" width="52" height="38" class="host"/>
-    <text x="553" y="58" text-anchor="middle" class="small">PC0</text>
-    <rect x="610" y="35" width="52" height="38" class="host"/>
-    <text x="636" y="58" text-anchor="middle" class="small">PC1</text>
-    <rect x="690" y="35" width="52" height="38" class="host"/>
-    <text x="716" y="58" text-anchor="middle" class="small">PC2</text>
-    <rect x="538" y="70" width="94" height="46" class="tag"/>
-    <text x="585" y="98" text-anchor="middle" class="label">192.168.20.3</text>
-    <rect x="687" y="70" width="94" height="46" class="tag"/>
-    <text x="734" y="98" text-anchor="middle" class="label">192.168.20.2</text>
+    <rect class="pc" x="98" y="0" width="46" height="38"/>
+    <rect class="pc" x="858" y="22" width="45" height="38"/>
+    <rect class="pc" x="1015" y="22" width="45" height="38"/>
+    <rect class="pc" x="1178" y="22" width="44" height="38"/>
+
+    <text x="883" y="43" text-anchor="middle" class="tiny">PC-PT</text>
+    <text x="1038" y="43" text-anchor="middle" class="tiny">PC0</text>
+    <text x="1200" y="43" text-anchor="middle" class="tiny">PC1</text>
+
+    <rect class="tag2" x="860" y="64" width="106" height="22"/>
+    <text x="913" y="80" text-anchor="middle" class="tiny">192.168.20.3</text>
+    <rect class="tag2" x="1008" y="64" width="106" height="22"/>
+    <text x="1061" y="80" text-anchor="middle" class="tiny">192.168.20.2</text>
   </g>
 
-  <!-- Main switch cluster -->
+  <!-- Middle core switches -->
   <g>
-    <rect x="350" y="150" width="65" height="40" class="switch"/>
-    <text x="383" y="175" text-anchor="middle" class="small">Core</text>
-    <rect x="430" y="150" width="65" height="40" class="switch"/>
-    <text x="463" y="175" text-anchor="middle" class="small">Switch</text>
-    <rect x="510" y="150" width="65" height="40" class="switch"/>
-    <text x="543" y="175" text-anchor="middle" class="small">Switch</text>
-    <rect x="738" y="150" width="65" height="40" class="switch"/>
-    <text x="771" y="175" text-anchor="middle" class="small">Switch</text>
-    <rect x="818" y="150" width="65" height="40" class="switch"/>
-    <text x="851" y="175" text-anchor="middle" class="small">Switch</text>
+    <rect class="switch" x="430" y="155" width="50" height="30"/>
+    <text x="455" y="175" text-anchor="middle" class="tiny">S1</text>
+
+    <rect class="switch" x="590" y="150" width="58" height="30"/>
+    <text x="619" y="170" text-anchor="middle" class="tiny">S2</text>
+
+    <rect class="switch" x="690" y="150" width="58" height="30"/>
+    <text x="719" y="170" text-anchor="middle" class="tiny">S3</text>
+
+    <rect class="switch" x="918" y="150" width="58" height="30"/>
+    <text x="947" y="170" text-anchor="middle" class="tiny">S4</text>
   </g>
 
-  <!-- Left side VLAN router -->
+  <!-- Router left -->
   <g>
-    <rect x="120" y="320" width="62" height="36" class="router"/>
-    <text x="151" y="343" text-anchor="middle" class="small">R1</text>
-    <rect x="80" y="355" width="130" height="40" class="tag"/>
-    <text x="145" y="381" text-anchor="middle" class="label">PT8200</text>
+    <rect class="router" x="170" y="360" width="60" height="30"/>
+    <text x="200" y="380" text-anchor="middle" class="tiny">R1</text>
+    <rect class="tag2" x="120" y="395" width="120" height="22"/>
+    <text x="180" y="411" text-anchor="middle" class="tiny">PT8200</text>
   </g>
 
-  <!-- Middle topology -->
+  <!-- Left labels -->
   <g>
-    <rect x="305" y="248" width="70" height="42" class="switch"/>
-    <text x="340" y="274" text-anchor="middle" class="small">2960-24TT</text>
-    <rect x="520" y="248" width="70" height="42" class="switch"/>
-    <text x="555" y="274" text-anchor="middle" class="small">2960-24TT</text>
-    <rect x="730" y="248" width="70" height="42" class="switch"/>
-    <text x="765" y="274" text-anchor="middle" class="small">2960-24TT</text>
-    <rect x="548" y="485" width="70" height="42" class="switch"/>
-    <text x="583" y="511" text-anchor="middle" class="small">2960-24TT</text>
+    <rect class="tag" x="30" y="250" width="170" height="36"/>
+    <text x="115" y="273" text-anchor="middle" class="small">192.168.1.1</text>
+    <text x="115" y="290" text-anchor="middle" class="tiny">VLAN 10 : DEPT A</text>
+
+    <rect class="tag" x="25" y="520" width="200" height="38"/>
+    <text x="125" y="544" text-anchor="middle" class="small">DEPT B VLAN:20 192.168.20.1</text>
   </g>
 
-  <!-- Servers -->
+  <!-- Core switch blocks -->
   <g>
-    <rect x="760" y="360" width="64" height="42" class="server"/>
-    <text x="792" y="385" text-anchor="middle" class="small">Server</text>
-    <rect x="875" y="390" width="64" height="42" class="server"/>
-    <text x="907" y="415" text-anchor="middle" class="small">Server</text>
-    <rect x="940" y="510" width="64" height="42" class="server"/>
-    <text x="972" y="535" text-anchor="middle" class="small">Server</text>
-    <rect x="850" y="600" width="64" height="42" class="server"/>
-    <text x="882" y="625" text-anchor="middle" class="small">Server</text>
-    <rect x="560" y="640" width="64" height="42" class="server"/>
-    <text x="592" y="665" text-anchor="middle" class="small">Server</text>
+    <rect class="switch" x="275" y="245" width="84" height="38"/>
+    <text x="317" y="269" text-anchor="middle" class="tiny">2960-24TT</text>
+
+    <rect class="switch" x="470" y="245" width="84" height="38"/>
+    <text x="512" y="269" text-anchor="middle" class="tiny">2960-24TT</text>
+
+    <rect class="switch" x="653" y="245" width="84" height="38"/>
+    <text x="695" y="269" text-anchor="middle" class="tiny">2960-24TT</text>
+
+    <rect class="switch" x="855" y="245" width="84" height="38"/>
+    <text x="897" y="269" text-anchor="middle" class="tiny">2960-24TT</text>
+
+    <rect class="switch" x="1000" y="245" width="84" height="38"/>
+    <text x="1042" y="269" text-anchor="middle" class="tiny">2960-24TT</text>
   </g>
 
   <!-- Access switches -->
   <g>
-    <rect x="380" y="430" width="74" height="38" class="switch"/>
-    <text x="417" y="453" text-anchor="middle" class="small">Acc Sw 1</text>
-    <rect x="590" y="430" width="74" height="38" class="switch"/>
-    <text x="627" y="453" text-anchor="middle" class="small">Acc Sw 2</text>
-    <rect x="740" y="555" width="74" height="38" class="switch"/>
-    <text x="777" y="578" text-anchor="middle" class="small">Acc Sw 3</text>
-    <rect x="420" y="605" width="74" height="38" class="switch"/>
-    <text x="457" y="628" text-anchor="middle" class="small">Acc Sw 4</text>
+    <rect class="switch" x="330" y="420" width="86" height="38"/>
+    <text x="373" y="444" text-anchor="middle" class="tiny">Acc Sw 1</text>
+
+    <rect class="switch" x="548" y="420" width="86" height="38"/>
+    <text x="591" y="444" text-anchor="middle" class="tiny">Acc Sw 2</text>
+
+    <rect class="switch" x="822" y="420" width="86" height="38"/>
+    <text x="865" y="444" text-anchor="middle" class="tiny">Acc Sw 3</text>
+
+    <rect class="switch" x="1060" y="420" width="86" height="38"/>
+    <text x="1103" y="444" text-anchor="middle" class="tiny">Acc Sw 4</text>
   </g>
 
-  <!-- Client devices -->
+  <!-- Server bus -->
   <g>
-    <rect x="235" y="455" width="54" height="36" class="host"/>
-    <text x="262" y="478" text-anchor="middle" class="small">PC</text>
-    <rect x="180" y="650" width="54" height="36" class="host"/>
-    <text x="207" y="673" text-anchor="middle" class="small">PC</text>
-    <rect x="1020" y="620" width="54" height="36" class="host"/>
-    <text x="1047" y="643" text-anchor="middle" class="small">PC</text>
-    <rect x="990" y="435" width="54" height="36" class="host"/>
-    <text x="1017" y="458" text-anchor="middle" class="small">PC</text>
-    <rect x="300" y="610" width="54" height="36" class="host"/>
-    <text x="327" y="633" text-anchor="middle" class="small">PC</text>
+    <rect class="server" x="764" y="345" width="68" height="36"/>
+    <text x="798" y="367" text-anchor="middle" class="tiny">Server</text>
+
+    <rect class="server" x="885" y="355" width="68" height="36"/>
+    <text x="919" y="377" text-anchor="middle" class="tiny">Server</text>
+
+    <rect class="server" x="1048" y="355" width="68" height="36"/>
+    <text x="1082" y="377" text-anchor="middle" class="tiny">Server</text>
+
+    <rect class="server" x="913" y="530" width="68" height="36"/>
+    <text x="947" y="552" text-anchor="middle" class="tiny">Server</text>
+
+    <rect class="server" x="740" y="610" width="68" height="36"/>
+    <text x="774" y="632" text-anchor="middle" class="tiny">Server</text>
   </g>
 
-  <!-- Labels -->
+  <!-- PCs at bottom & side -->
   <g>
-    <rect x="100" y="180" width="144" height="40" class="siteTag"/>
-    <text x="172" y="205" text-anchor="middle" class="label">192.168.1.1</text>
-    <text x="172" y="225" text-anchor="middle" class="small">VLAN 10 : DEPT A</text>
+    <rect class="pc" x="240" y="465" width="52" height="34"/>
+    <text x="266" y="486" text-anchor="middle" class="tiny">PC</text>
 
-    <rect x="80" y="520" width="170" height="42" class="siteTag"/>
-    <text x="165" y="548" text-anchor="middle" class="label">DEPT B VLAN:20 192.168.20.1</text>
+    <rect class="pc" x="152" y="620" width="52" height="34"/>
+    <text x="178" y="641" text-anchor="middle" class="tiny">PC</text>
 
-    <rect x="870" y="150" width="120" height="40" class="siteTag"/>
-    <text x="930" y="175" text-anchor="middle" class="label">192.168.20.2</text>
+    <rect class="pc" x="1205" y="620" width="52" height="34"/>
+    <text x="1231" y="641" text-anchor="middle" class="tiny">PC</text>
 
-    <rect x="930" y="260" width="120" height="40" class="siteTag"/>
-    <text x="990" y="285" text-anchor="middle" class="label">192.168.13</text>
+    <rect class="pc" x="1005" y="470" width="52" height="34"/>
+    <text x="1031" y="491" text-anchor="middle" class="tiny">PC</text>
 
-    <rect x="920" y="630" width="150" height="40" class="siteTag"/>
-    <text x="995" y="655" text-anchor="middle" class="label">192.168.1.2</text>
-    <text x="995" y="675" text-anchor="middle" class="small">PC-PT</text>
+    <rect class="pc" x="1170" y="470" width="52" height="34"/>
+    <text x="1196" y="491" text-anchor="middle" class="tiny">PC</text>
   </g>
 
-  <!-- Main network wires -->
+  <!-- Network wires -->
   <g>
-    <path d="M 182 338 L 340 270" class="wire"/>
-    <path d="M 182 338 L 520 270" class="wire"/>
-    <path d="M 182 338 L 730 270" class="wire"/>
-    <path d="M 383 190 L 520 270" class="wire"/>
-    <path d="M 463 190 L 555 270" class="wire"/>
-    <path d="M 543 190 L 720 270" class="wire"/>
-    <path d="M 771 190 L 770 270" class="wire"/>
-    <path d="M 851 190 L 820 270" class="wire"/>
+    <path d="M 230 375 L 316 283" class="wire"/>
+    <path d="M 230 375 L 512 283" class="wire"/>
+    <path d="M 230 375 L 695 283" class="wire"/>
+    <path d="M 230 375 L 897 283" class="wire"/>
+    <path d="M 230 375 L 1042 283" class="wire"/>
 
-    <path d="M 340 290 L 417 430" class="wire"/>
-    <path d="M 555 290 L 627 430" class="wire"/>
-    <path d="M 765 290 L 777 555" class="wire"/>
+    <path d="M 316 283 L 373 420" class="wire"/>
+    <path d="M 512 283 L 591 420" class="wire"/>
+    <path d="M 695 283 L 865 420" class="wire"/>
+    <path d="M 897 283 L 1103 420" class="wire"/>
 
-    <path d="M 417 468 L 262 455" class="wire-green"/>
-    <path d="M 417 468 L 207 650" class="wire-green"/>
-    <path d="M 627 468 L 1017 435" class="wire-green"/>
-    <path d="M 627 468 L 1047 620" class="wire-green"/>
-    <path d="M 777 593 L 327 610" class="wire-green"/>
-    <path d="M 777 593 L 592 640" class="wire-green"/>
+    <path d="M 373 458 L 266 465" class="wireg"/>
+    <path d="M 373 458 L 178 620" class="wireg"/>
+    <path d="M 591 458 L 1031 470" class="wireg"/>
+    <path d="M 591 458 L 1231 620" class="wireg"/>
+    <path d="M 865 458 L 1196 470" class="wireg"/>
+    <path d="M 1103 458 L 774 610" class="wireg"/>
 
-    <path d="M 440 605 L 592 640" class="wire-orange"/>
-    <path d="M 792 402 L 907 390" class="wire-blue"/>
-    <path d="M 907 432 L 972 510" class="wire-blue"/>
-    <path d="M 882 600 L 1047 620" class="wire-blue"/>
+    <path d="M 798 381 L 919 355" class="wireo"/>
+    <path d="M 919 391 L 947 530" class="wireo"/>
+    <path d="M 1082 391 L 1231 620" class="wireo"/>
+    <path d="M 947 566 L 1103 458" class="wireo"/>
+
+    <path d="M 455 185 L 512 245" class="wire"/>
+    <path d="M 619 180 L 695 245" class="wire"/>
+    <path d="M 719 180 L 897 245" class="wire"/>
+    <path d="M 947 180 L 1042 245" class="wire"/>
   </g>
 
-  <!-- Small green/orange indicator dots -->
+  <!-- green/orange connection points -->
   <g>
-    <circle cx="180" cy="338" r="6" fill="#35d46a"/>
-    <circle cx="340" cy="270" r="6" fill="#35d46a"/>
-    <circle cx="520" cy="270" r="6" fill="#35d46a"/>
-    <circle cx="730" cy="270" r="6" fill="#35d46a"/>
-    <circle cx="417" cy="430" r="6" fill="#35d46a"/>
-    <circle cx="627" cy="430" r="6" fill="#35d46a"/>
-    <circle cx="777" cy="555" r="6" fill="#35d46a"/>
-    <circle cx="262" cy="455" r="6" fill="#35d46a"/>
-    <circle cx="207" cy="650" r="6" fill="#35d46a"/>
-    <circle cx="1017" cy="435" r="6" fill="#35d46a"/>
-    <circle cx="1047" cy="620" r="6" fill="#35d46a"/>
-    <circle cx="327" cy="610" r="6" fill="#35d46a"/>
-    <circle cx="592" cy="640" r="6" fill="#35d46a"/>
-    <circle cx="440" cy="605" r="6" fill="#f39c12"/>
-    <circle cx="792" cy="360" r="6" fill="#f39c12"/>
-    <circle cx="907" cy="390" r="6" fill="#f39c12"/>
-    <circle cx="972" cy="510" r="6" fill="#f39c12"/>
-    <circle cx="882" cy="600" r="6" fill="#f39c12"/>
+    <circle cx="230" cy="375" r="5" fill="#35d46a"/>
+    <circle cx="316" cy="283" r="5" fill="#35d46a"/>
+    <circle cx="512" cy="283" r="5" fill="#35d46a"/>
+    <circle cx="695" cy="283" r="5" fill="#35d46a"/>
+    <circle cx="897" cy="283" r="5" fill="#35d46a"/>
+    <circle cx="1042" cy="283" r="5" fill="#35d46a"/>
+    <circle cx="373" cy="420" r="5" fill="#35d46a"/>
+    <circle cx="591" cy="420" r="5" fill="#35d46a"/>
+    <circle cx="865" cy="420" r="5" fill="#35d46a"/>
+    <circle cx="1103" cy="420" r="5" fill="#35d46a"/>
+    <circle cx="266" cy="465" r="5" fill="#35d46a"/>
+    <circle cx="178" cy="620" r="5" fill="#35d46a"/>
+    <circle cx="1031" cy="470" r="5" fill="#35d46a"/>
+    <circle cx="1231" cy="620" r="5" fill="#35d46a"/>
+    <circle cx="1196" cy="470" r="5" fill="#35d46a"/>
+    <circle cx="774" cy="610" r="5" fill="#35d46a"/>
+    <circle cx="798" cy="345" r="5" fill="#f39c12"/>
+    <circle cx="919" cy="355" r="5" fill="#f39c12"/>
+    <circle cx="1082" cy="355" r="5" fill="#f39c12"/>
+    <circle cx="947" cy="530" r="5" fill="#f39c12"/>
   </g>
 
-  <!-- Additional small node labels -->
+  <!-- labels above right side -->
   <g>
-    <rect x="260" y="170" width="120" height="34" class="tag"/>
-    <text x="320" y="192" text-anchor="middle" class="small">192.168.20.1</text>
-    <rect x="650" y="200" width="120" height="34" class="tag"/>
-    <text x="710" y="222" text-anchor="middle" class="small">PC-PT</text>
-    <rect x="430" y="610" width="120" height="34" class="tag"/>
-    <text x="490" y="632" text-anchor="middle" class="small">Server-PT</text>
+    <rect class="tag2" x="1160" y="88" width="120" height="22"/>
+    <text x="1220" y="103" text-anchor="middle" class="tiny">192.168.20.2</text>
+
+    <rect class="tag2" x="1070" y="135" width="120" height="22"/>
+    <text x="1130" y="150" text-anchor="middle" class="tiny">192.168.13</text>
+
+    <rect class="tag2" x="1185" y="610" width="120" height="22"/>
+    <text x="1245" y="625" text-anchor="middle" class="tiny">192.168.1.2</text>
   </g>
 </svg>
